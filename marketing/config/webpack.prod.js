@@ -6,19 +6,19 @@ const packageJson = require('../package.json');
 const domain = process.env.PRODUCTION_DOMAIN
 
 const prodConfig = {
-    mode: "production",
-    output: {
-        filename: '[name].[contecthash].js'
-    },
-    plugins: [
-        new ModuleFederationPlugin({
-            name: 'marketing',
-            filename: 'remoteEntry.js',
-            exposes: {
-              './MarketingApp': './src/bootstrap',
-            },
-            shared: packageJson.dependencies,
-          }),
-    ]
+  mode: "production",
+  output: {
+    filename: '[name].[contecthash].js'
+  },
+  plugins: [
+    new ModuleFederationPlugin({
+      name: 'marketing',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './MarketingApp': './src/bootstrap',
+      },
+      shared: packageJson.dependencies,
+    }),
+  ]
 }
 module.exports = merge(commonConfig, prodConfig);
