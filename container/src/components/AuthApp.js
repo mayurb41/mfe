@@ -13,7 +13,6 @@ export default ({ onSignIn }) => {
             onNavigate: ({ pathname: nextPathname }) => {
                 const { pathname } = history.location
 
-                console.log('The container noticed navigation in Auth ===============>', nextPathname);
 
                 if (pathname !== nextPathname) {
                     history.push(nextPathname)

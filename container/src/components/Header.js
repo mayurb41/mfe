@@ -96,8 +96,7 @@ export default function Header({ isSignedIn, onSignOut }) {
             variant="outlined"
             className={classes.link}
             component={RouterLink}
-            to='/dashboard/dapricing'
-            onClick={onClick}
+            to='/dashboardR/dapricing'
           >
             Dashboard Pricing
           </Button>

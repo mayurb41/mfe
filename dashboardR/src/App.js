@@ -14,8 +14,8 @@ export default ({ history }) => {
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>
-            <Route path="/dashboard/dapricing" component={Pricing} />
-            <Route path="/dashboard/dalanding" component={Landing} />
+            <Route path="/dashboardR/dapricing" component={Pricing} />
+            <Route path="/dashboardR/dalanding" component={Landing} />
           </Switch>
         </Router>
       </StylesProvider>

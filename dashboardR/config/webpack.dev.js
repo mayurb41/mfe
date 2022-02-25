@@ -7,20 +7,20 @@ const packageJson = require('../package.json');
 const devConfig = {
   mode: 'development',
   output: {
-    publicPath: 'http://localhost:8083/'
+    publicPath: 'http://localhost:8084/'
   },
   devServer: {
-    port: 8083,
+    port: 8084,
     historyApiFallback: {
       index: 'index.html',
     },
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'dashboard',
+      name: 'dashboardR',
       filename: 'remoteEntry.js',
       exposes: {
-        './DashboardApp': './src/bootstrap',
+        './DashboardRApp': './src/bootstrap',
       },
       shared: packageJson.dependencies,
     }),
