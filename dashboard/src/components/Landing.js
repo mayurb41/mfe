@@ -15,7 +15,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <MaterialLink component={Link} to="/" color="inherit">
+      <MaterialLink component={Link} to="/dashboard/dalanding" color="inherit">
         Your Website
       </MaterialLink>{' '}
       {new Date().getFullYear()}
@@ -79,7 +79,7 @@ export default function Album() {
               color="textPrimary"
               gutterBottom
             >
-              Home Page
+              Dashboard Home Page
             </Typography>
             <Typography
               variant="h5"
@@ -94,16 +94,16 @@ export default function Album() {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Link to="/newPricing">
+                  <Link to="/dashboard/dapricing">
                     <Button variant="contained" color="primary">
-                      Pricing
+                      Dashboard Pricing
                     </Button>
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link to="/newLanding">
+                  <Link to="/dashboard/dalanding">
                     <Button variant="outlined" color="primary">
-                      Landing
+                      Dashboard Landing
                     </Button>
                   </Link>
                 </Grid>

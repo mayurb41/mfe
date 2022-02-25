@@ -9,14 +9,14 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: '[name].[contecthash].js',
-    publicPath: '/dashboard/latest/',
+    publicPath: '/auth/latest/',
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'dashboard',
+      name: 'auth',
       filename: 'remoteEntry.js',
       exposes: {
-        './DashboardApp': './src/bootstrap',
+        './AuthApp': './src/bootstrap',
       },
       shared: packageJson.dependencies,
     }),

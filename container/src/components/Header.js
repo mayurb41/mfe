@@ -54,11 +54,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header({ signedIn, onSignOut }) {
+export default function Header({ isSignedIn, onSignOut }) {
   const classes = useStyles();
 
   const onClick = () => {
-    if (signedIn && onSignOut) {
+    if (isSignedIn && onSignOut) {
       onSignOut();
     }
   };
@@ -86,10 +86,20 @@ export default function Header({ signedIn, onSignOut }) {
             variant="outlined"
             className={classes.link}
             component={RouterLink}
-            to={signedIn ? '/' : '/auth/signin'}
+            to={isSignedIn ? '/' : '/auth/signin'}
             onClick={onClick}
           >
-            {signedIn ? 'Logout' : 'Login'}
+            {isSignedIn ? 'Logout' : 'Login'}
+          </Button>
+          <Button
+            color="primary"
+            variant="outlined"
+            className={classes.link}
+            component={RouterLink}
+            to='/dashboard/dapricing'
+            onClick={onClick}
+          >
+            Dashboard Pricing
           </Button>
         </Toolbar>
       </AppBar>
